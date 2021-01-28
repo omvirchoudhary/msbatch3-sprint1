@@ -15,14 +15,8 @@ public class InventoryController {
 		this.inventoryService = inventoryService;
 	}
 
-	@PostMapping("/upload")
-	public void upload(@RequestParam("file") MultipartFile file) throws Exception {
-		inventoryService.upload(file);
+	@GetMapping("/sprint1")
+	public void getSprint1() throws Exception {
+		inventoryService.sprint1Details();
 	}
-	
-	@PostMapping("/import")
-	public void mapReapExcelDatatoDB(@RequestParam("file") MultipartFile reapExcelDataFile) throws Exception {
-		inventoryService.mapReapExcelDatatoDB(reapExcelDataFile);
-	}
-	
 }
